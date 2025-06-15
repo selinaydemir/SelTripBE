@@ -8,6 +8,9 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.json({message: 'Service is running..'})
+})
 app.use("/api/place", placeRoutes);
 app.use("/api/user", userRoutes);
 
